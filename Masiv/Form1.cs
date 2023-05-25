@@ -120,7 +120,7 @@ namespace Masiv
 
         private void сгенерироватьћассивToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void вывести“ретийћассив¬‘айлToolStripMenuItem_Click(object sender, EventArgs e)
