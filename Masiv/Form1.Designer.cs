@@ -45,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -66,11 +67,11 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 65);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 47);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(373, 76);
+            this.dataGridView1.Size = new System.Drawing.Size(114, 323);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -79,10 +80,10 @@
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(24, 167);
+            this.dataGridView2.Location = new System.Drawing.Point(134, 47);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(373, 76);
+            this.dataGridView2.Size = new System.Drawing.Size(114, 323);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -91,10 +92,10 @@
             this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(24, 301);
+            this.dataGridView3.Location = new System.Drawing.Point(260, 47);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(373, 76);
+            this.dataGridView3.Size = new System.Drawing.Size(114, 323);
             this.dataGridView3.TabIndex = 2;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
@@ -105,13 +106,13 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Gilroy Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(418, 65);
+            this.button1.Location = new System.Drawing.Point(384, 47);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 176);
+            this.button1.Size = new System.Drawing.Size(120, 57);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Сгенерировать массивы";
+            this.button1.Text = "Сгенерировать первый и второй массив";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.CreatingTheFirstAndSecondArray_Click);
             // 
             // button2
             // 
@@ -119,13 +120,13 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Gilroy Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(418, 301);
+            this.button2.Location = new System.Drawing.Point(384, 110);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 76);
+            this.button2.Size = new System.Drawing.Size(120, 57);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Вывести третий массив в файл";
+            this.button2.Text = "Сгенерировать третий массив";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.CreatingAThirdArray_Click);
             // 
             // menuStrip1
             // 
@@ -135,7 +136,7 @@
             this.массивToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(534, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(514, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -180,15 +181,15 @@
             // сгенерироватьМассивToolStripMenuItem
             // 
             this.сгенерироватьМассивToolStripMenuItem.Name = "сгенерироватьМассивToolStripMenuItem";
-            this.сгенерироватьМассивToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
-            this.сгенерироватьМассивToolStripMenuItem.Text = "Сгенерировать массив";
+            this.сгенерироватьМассивToolStripMenuItem.Size = new System.Drawing.Size(345, 22);
+            this.сгенерироватьМассивToolStripMenuItem.Text = "Сгенерировать первый и второй массив";
             this.сгенерироватьМассивToolStripMenuItem.Click += new System.EventHandler(this.сгенерироватьМассивToolStripMenuItem_Click);
             // 
             // вывестиТретийМассивВФайлToolStripMenuItem
             // 
             this.вывестиТретийМассивВФайлToolStripMenuItem.Name = "вывестиТретийМассивВФайлToolStripMenuItem";
-            this.вывестиТретийМассивВФайлToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
-            this.вывестиТретийМассивВФайлToolStripMenuItem.Text = "Вывести третий массив в файл";
+            this.вывестиТретийМассивВФайлToolStripMenuItem.Size = new System.Drawing.Size(345, 22);
+            this.вывестиТретийМассивВФайлToolStripMenuItem.Text = "Сгенерировать третий массив";
             this.вывестиТретийМассивВФайлToolStripMenuItem.Click += new System.EventHandler(this.вывестиТретийМассивВФайлToolStripMenuItem_Click);
             // 
             // label1
@@ -197,11 +198,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Gilroy SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Peru;
-            this.label1.Location = new System.Drawing.Point(24, 51);
+            this.label1.Location = new System.Drawing.Point(9, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 14);
+            this.label1.Size = new System.Drawing.Size(97, 14);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Это первый массив";
+            this.label1.Text = "Первый массив";
             // 
             // label2
             // 
@@ -209,11 +210,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Gilroy SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Peru;
-            this.label2.Location = new System.Drawing.Point(24, 148);
+            this.label2.Location = new System.Drawing.Point(135, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 14);
+            this.label2.Size = new System.Drawing.Size(94, 14);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Это второй массив";
+            this.label2.Text = "Второй массив";
             // 
             // label3
             // 
@@ -221,20 +222,23 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Gilroy SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Peru;
-            this.label3.Location = new System.Drawing.Point(24, 256);
+            this.label3.Location = new System.Drawing.Point(261, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(353, 42);
+            this.label3.Size = new System.Drawing.Size(92, 14);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Это третий массив состоящий из положительных элементов\r\nпервого и второго массива" +
-    ", если же ему не хватит\r\nположительных элементов он добавит единиц";
+            this.label3.Text = "Третий массив";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(534, 397);
+            this.ClientSize = new System.Drawing.Size(514, 380);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -275,7 +279,6 @@
         private ToolStripMenuItem вывестиТретийМассивВФайлToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem сохранитьToolStripMenuItem;
-
-
+        private OpenFileDialog openFileDialog1;
     }
 }
